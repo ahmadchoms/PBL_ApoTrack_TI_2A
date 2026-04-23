@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\PharmacyController;
+use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Apotek\DashboardController as ApotekDashboardController;
 use App\Http\Controllers\Apotek\OrderController;
 use App\Http\Controllers\Apotek\ProfileController;
@@ -43,4 +44,6 @@ Route::prefix('admin')
             ->name('dashboard');
         Route::get('/pharmacies', [PharmacyController::class, 'index'])
             ->name('pharmacies');
+        Route::get('/profile', [AdminProfileController::class, 'index'])
+            ->name('profile');
     });
